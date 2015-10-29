@@ -7,7 +7,7 @@ public class CompareAdjacentValues
     {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter a series of numbers or a character to quit");
-        double input == 0;
+        double input = 0;
         while (s.hasNextDouble())
         {
             double previousInput = input;
