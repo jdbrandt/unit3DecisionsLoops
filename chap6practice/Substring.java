@@ -9,21 +9,22 @@ public class Substring
         String word=scan.next();
         int n=word.length();
         int first = 0;
+        int counter = 0;
         int next = 1;
-        int last = n;
-        while (next<n)
+        while (next<n+1)
         {
             
-            while (next < n+1)
+            while ((next) <= n)
             {
-                System.out.println(word.substring(first,next));
+                System.out.println(word.substring(first,(next)));
                 first++;
                 next++;
             }
+            counter+=1;
             first=0;
-            next++;
+            next=0;
+            next+=counter;
        
         }
-
     }
 }
