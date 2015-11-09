@@ -17,7 +17,7 @@ public class Diamond
             }
            for (int a = 0; a<=i; a++)
            {
-               str+="*";
+               str+="*";  
             }
            for (int a = 0; a<(2*n-i)/2; a++)
            {
@@ -25,7 +25,24 @@ public class Diamond
             }
            System.out.println(str);
         }
-
+        for (int i = 2*n-3; i>=0; i-=2)
+        {
+            str = "";
+            for(int a = 0; a<=(2*n-i)/2;  a++)
+            {
+                str+=" ";
+            }
+            for(int a = 0; a<i; a++)
+            {
+                str+="*";
+            }
+            for(int a = 0; a<=(2*n-i)/2; a++)
+            {
+                str+=" ";
+            }
+            System.out.println(str);
+        }
+        
         }
     }
-}
+
