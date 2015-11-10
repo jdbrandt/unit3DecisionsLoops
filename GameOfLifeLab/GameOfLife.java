@@ -53,9 +53,24 @@ public class GameOfLife
     private void populateGame()
     {
         // constants for the location of the three cells initially alive
-        final int X1 = 2, Y1 = 0;
-        final int X2 = 0, Y2 = 2;
-        final int X3 = 1, Y3 = 2;
+        final int ROW1 = 5, COL1 = 1;
+        final int ROW2 = 5, COL2 = 2;
+        final int ROW3 = 6, COL3 = 1;
+        final int ROW4 = 6, COL4 = 2;
+        final int ROW5 = 5, COL5 = 11;
+        final int ROW6 = 6, COL6 = 11;
+        final int ROW7 = 7, COL7 = 11;
+        final int ROW8 = 4, COL8 = 12;
+        final int ROW9 = 8, COL9 = 12;
+        final int ROW10 = 3, COL10 = 13;
+        final int ROW11 = 9, COL11 = 13;
+        final int ROW12 = 3, COL12 = 14;
+        final int ROW13 = 9, COL13 = 14;
+        final int ROW14 = 6, COL14 = 15;
+        final int ROW15 = 4, COL15 = 16;
+        final int ROW16 = 8, COL16 = 16;
+        final int ROW17 = 5, COL17 = 17;
+        final int ROW18 = 6, COL18 = 
 
         // the grid of Actors that maintains the state of the game
         //  (alive cells contains actors; dead cells do not)
