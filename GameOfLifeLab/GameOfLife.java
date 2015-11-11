@@ -37,6 +37,7 @@ public class GameOfLife
         
         // populate the game
         populateGame();
+
         
         // display the newly constructed and populated world
         world.show();
@@ -258,8 +259,6 @@ public class GameOfLife
         
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
-        
-        // insert magic here...
         
     }
     
