@@ -20,8 +20,8 @@ public class GameOfLife
     private ActorWorld world;
     
     // the game board will have 100 rows and 100 columns
-    private final int ROWS = 100;
-    private final int COLS = 100;
+    private final int ROWS = 10;
+    private final int COLS = 10;
     
     /**
      * Default constructor for objects of class GameOfLife
@@ -56,42 +56,15 @@ public class GameOfLife
     private void populateGame()
     {
         // constants for the location of the three cells initially alive
-        final int ROW1 = 5, COL1 = 1;
-        final int ROW2 = 5, COL2 = 2;
-        final int ROW3 = 6, COL3 = 1;
-        final int ROW4 = 6, COL4 = 2;
-        final int ROW5 = 5, COL5 = 11;
-        final int ROW6 = 6, COL6 = 11;
-        final int ROW7 = 7, COL7 = 11;
-        final int ROW8 = 4, COL8 = 12;
-        final int ROW9 = 8, COL9 = 12;
-        final int ROW10 = 3, COL10 = 13;
-        final int ROW11 = 9, COL11 = 13;
-        final int ROW12 = 3, COL12 = 14;
-        final int ROW13 = 9, COL13 = 14;
-        final int ROW14 = 6, COL14 = 15;
-        final int ROW15 = 4, COL15 = 16;
-        final int ROW16 = 8, COL16 = 16;
-        final int ROW17 = 5, COL17 = 17;
-        final int ROW18 = 6, COL18 = 17;
-        final int ROW19 = 7, COL19 = 17;
-        final int ROW20 = 6, COL20 = 18;
-        final int ROW21 = 3, COL21 = 21;
-        final int ROW22 = 4, COL22 = 21;
-        final int ROW23 = 5, COL23 = 21;
-        final int ROW24 = 3, COL24 = 22;
-        final int ROW25 = 4, COL25 = 22;
-        final int ROW26 = 5, COL26 = 22;
-        final int ROW27 = 2, COL27 = 23;
-        final int ROW28 = 6, COL28 = 23;
-        final int ROW29 = 1, COL29 = 25;
-        final int ROW30 = 2, COL30 = 25;
-        final int ROW31 = 6, COL31 = 25;
-        final int ROW32 = 7, COL32 = 25;
-        final int ROW33 = 3, COL33 = 35;
-        final int ROW34 = 4, COL34 = 35;
-        final int ROW35 = 3, COL35 = 36;
-        final int ROW36 = 4, COL36 = 36;
+        final int ROW1 = 3, COL1 = 3;
+        final int ROW2 = 3, COL2 = 4;
+        final int ROW3 = 3, COL3 = 5;
+        final int ROW4 = 4, COL4 = 3;
+        final int ROW5 = 4, COL5 = 4;
+        final int ROW6 = 4, COL6 = 5;
+        final int ROW7 = 5, COL7 = 3;
+        final int ROW8 = 5, COL8 = 4;
+        final int ROW9 = 5, COL9 = 5;
 
         // the grid of Actors that maintains the state of the game
         //  (alive cells contains actors; dead cells do not)
@@ -134,113 +107,7 @@ public class GameOfLife
         Location loc9 = new Location(ROW9, COL9);
         grid.put(loc9, rock9);
         
-        Rock rock10 = new Rock();
-        Location loc10 = new Location(ROW10, COL10);
-        grid.put(loc10, rock10);
         
-        Rock rock11 = new Rock();
-        Location loc11 = new Location(ROW11, COL11);
-        grid.put(loc11, rock11);
-        
-        Rock rock12 = new Rock();
-        Location loc12 = new Location(ROW12, COL12);
-        grid.put(loc12, rock12);
-        
-        Rock rock13 = new Rock();
-        Location loc13 = new Location(ROW13, COL13);
-        grid.put(loc13, rock13);
-        
-        Rock rock14 = new Rock();
-        Location loc14 = new Location(ROW14, COL14);
-        grid.put(loc14, rock14);
-        
-        Rock rock15 = new Rock();
-        Location loc15 = new Location(ROW15, COL15);
-        grid.put(loc15, rock15);
-        
-        Rock rock16 = new Rock();
-        Location loc16 = new Location(ROW16, COL16);
-        grid.put(loc16, rock16);
-        
-        Rock rock17 = new Rock();
-        Location loc17 = new Location(ROW17, COL17);
-        grid.put(loc17, rock17);
-        
-        Rock rock18 = new Rock();
-        Location loc18 = new Location(ROW18, COL18);
-        grid.put(loc18, rock18);
-        
-        Rock rock19 = new Rock();
-        Location loc19 = new Location(ROW19, COL19);
-        grid.put(loc19, rock19);
-        
-        Rock rock20 = new Rock();
-        Location loc20 = new Location(ROW20, COL20);
-        grid.put(loc20, rock20);
-        
-        Rock rock21 = new Rock();
-        Location loc21 = new Location(ROW21, COL21);
-        grid.put(loc21, rock21);
-        
-        Rock rock22 = new Rock();
-        Location loc22 = new Location(ROW22, COL22);
-        grid.put(loc22, rock22);
-        
-        Rock rock23 = new Rock();
-        Location loc23 = new Location(ROW23, COL23);
-        grid.put(loc23, rock23);
-        
-        Rock rock24 = new Rock();
-        Location loc24 = new Location(ROW24, COL24);
-        grid.put(loc24, rock24);
-        
-        Rock rock25 = new Rock();
-        Location loc25 = new Location(ROW25, COL25);
-        grid.put(loc25, rock25);
-        
-        Rock rock26 = new Rock();
-        Location loc26 = new Location(ROW26, COL26);
-        grid.put(loc26, rock26);
-        
-        Rock rock27 = new Rock();
-        Location loc27 = new Location(ROW27, COL27);
-        grid.put(loc27, rock27);
-        
-        Rock rock28 = new Rock();
-        Location loc28 = new Location(ROW28, COL28);
-        grid.put(loc28, rock28);
-        
-        Rock rock29 = new Rock();
-        Location loc29 = new Location(ROW29, COL29);
-        grid.put(loc29, rock29);
-        
-        Rock rock30 = new Rock();
-        Location loc30 = new Location(ROW30, COL30);
-        grid.put(loc30, rock30);
-        
-        Rock rock31 = new Rock();
-        Location loc31 = new Location(ROW31, COL31);
-        grid.put(loc31, rock31);
-        
-        Rock rock32 = new Rock();
-        Location loc32 = new Location(ROW32, COL32);
-        grid.put(loc32, rock32);
-        
-        Rock rock33 = new Rock();
-        Location loc33 = new Location(ROW33, COL33);
-        grid.put(loc33, rock33);
-        
-        Rock rock34 = new Rock();
-        Location loc34 = new Location(ROW34, COL34);
-        grid.put(loc34, rock34);
-        
-        Rock rock35 = new Rock();
-        Location loc35 = new Location(ROW35, COL35);
-        grid.put(loc35, rock35);
-        
-        Rock rock36 = new Rock();
-        Location loc36 = new Location(ROW36, COL36);
-        grid.put(loc36, rock36);
 
 
     }
@@ -272,6 +139,8 @@ public class GameOfLife
                     int neighbors = neighborhood.size();
                     if (neighbors<2 || neighbors>4)
                     {
+                        System.out.println(r+"");
+                        System.out.println(c+"");
                         grid.get(new Location(r, c)).removeSelfFromGrid();
                     }
                     
@@ -282,7 +151,9 @@ public class GameOfLife
                     int neighbors = neighborhood.size();
                     if (neighbors==3)
                     {
-                        grid.put(new Location(r,c), new Rock());
+                        Rock anonRock = new Rock();
+                        Location anonLoc = new Location(r, c);
+                        grid.put(anonLoc, anonRock);
                     }
                 }
             }
@@ -332,6 +203,7 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
+        game.createNextGeneration();
     }
 
 }
