@@ -73,39 +73,39 @@ public class GameOfLife
         
         Rock rock1 = new Rock();
         Location loc1 = new Location(ROW1, COL1);
-        grid.put(loc1, rock1);
+        rock1.putSelfInGrid(grid, loc1);
         
         Rock rock2 = new Rock();
         Location loc2 = new Location(ROW2, COL2);
-        grid.put(loc2, rock2);
+        rock2.putSelfInGrid(grid, loc2);
         
         Rock rock3 = new Rock();
         Location loc3 = new Location(ROW3, COL3);
-        grid.put(loc3, rock3);
+        rock3.putSelfInGrid(grid, loc3);
         
         Rock rock4 = new Rock();
         Location loc4 = new Location(ROW4, COL4);
-        grid.put(loc4, rock4);
+        rock4.putSelfInGrid(grid, loc4);
         
         Rock rock5 = new Rock();
         Location loc5 = new Location(ROW5, COL5);
-        grid.put(loc5, rock5);
+        rock5.putSelfInGrid(grid, loc5);
         
         Rock rock6 = new Rock();
         Location loc6 = new Location(ROW6, COL6);
-        grid.put(loc6, rock6);
+        rock6.putSelfInGrid(grid, loc6);
         
         Rock rock7 = new Rock();
         Location loc7 = new Location(ROW7, COL7);
-        grid.put(loc7, rock7);
+        rock7.putSelfInGrid(grid, loc7);
         
         Rock rock8 = new Rock();
         Location loc8 = new Location(ROW8, COL8);
-        grid.put(loc8, rock8);
+        rock8.putSelfInGrid(grid, loc8);
         
         Rock rock9 = new Rock();
         Location loc9 = new Location(ROW9, COL9);
-        grid.put(loc9, rock9);
+        rock9.putSelfInGrid(grid, loc9);
         
         
 
@@ -127,21 +127,23 @@ public class GameOfLife
          */
         
         // create the grid, of the specified size, that contains Actors
+        
         Grid<Actor> grid = world.getGrid();
         
         for (int r = 0; r<ROWS; r++)
         {
             for (int c = 0; c<COLS; c++)
             {
+                
                 if (grid.get(new Location(r, c))!=null)
                 {
+                    
                     ArrayList<Actor> neighborhood = grid.getNeighbors(new Location(r, c));
                     int neighbors = neighborhood.size();
                     if (neighbors<2 || neighbors>4)
                     {
-                        System.out.println(r+"");
-                        System.out.println(c+"");
-                        grid.get(new Location(r, c)).removeSelfFromGrid();
+                        Location anonLoc = new Location(r, c);
+                        grid.get(anonLoc).removeSelfFromGrid();
                     }
                     
                 }
@@ -153,7 +155,7 @@ public class GameOfLife
                     {
                         Rock anonRock = new Rock();
                         Location anonLoc = new Location(r, c);
-                        grid.put(anonLoc, anonRock);
+                        anonRock.putSelfInGrid(grid, anonLoc);
                     }
                 }
             }
