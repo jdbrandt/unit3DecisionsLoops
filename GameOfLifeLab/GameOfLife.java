@@ -20,8 +20,8 @@ public class GameOfLife
     private ActorWorld world;
     
     // the game board will have 100 rows and 100 columns
-    private final int ROWS = 10;
-    private final int COLS = 10;
+    private static final int ROWS = 10;
+    private static final int COLS = 10;
     
     /**
      * Default constructor for objects of class GameOfLife
@@ -32,6 +32,7 @@ public class GameOfLife
     public GameOfLife()
     {
         // create the grid, of the specified size, that contains Actors
+        
         BoundedGrid<Actor> grid = new BoundedGrid<Actor>(ROWS, COLS);
         
         // create a world based on the grid
@@ -182,7 +183,7 @@ public class GameOfLife
      *
      * @return    the number of rows in the game board
      */
-    public int getNumRows()
+    public static int getNumRows()
     {
         return ROWS;
     }
@@ -192,7 +193,7 @@ public class GameOfLife
      *
      * @return    the number of columns in the game board
      */
-    public int getNumCols()
+    public static int getNumCols()
     {
         return COLS;
     }
@@ -205,7 +206,8 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
-        game.createNextGeneration();
+        GameOfLifeWorld gameWorld = new GameOfLifeWorld();
+        gameWorld.step(world);
     }
 
 }
