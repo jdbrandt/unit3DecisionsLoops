@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class GameOfLife
 {
     // the world comprised of the grid that displays the graphics for the game
-    private ActorWorld world;
+    public GameOfLifeWorld world;
     
     // the game board will have 100 rows and 100 columns
     private static final int ROWS = 10;
@@ -36,7 +36,7 @@ public class GameOfLife
         BoundedGrid<Actor> grid = new BoundedGrid<Actor>(ROWS, COLS);
         
         // create a world based on the grid
-        world = new ActorWorld(grid);
+        world = new GameOfLifeWorld(grid);
         
         // populate the game
         populateGame();
@@ -69,7 +69,7 @@ public class GameOfLife
 
         // the grid of Actors that maintains the state of the game
         //  (alive cells contains actors; dead cells do not)
-        Grid<Actor> grid = world.getGrid();
+        BoundedGrid<Actor> grid = (BoundedGrid<Actor>) world.getGrid();
         
         
         Rock rock1 = new Rock();
@@ -128,7 +128,7 @@ public class GameOfLife
          */
         
         // create the grid, of the specified size, that contains Actors
-        
+        /*
         Grid<Actor> grid = world.getGrid();
         
         for (int r = 0; r<ROWS; r++)
@@ -161,6 +161,8 @@ public class GameOfLife
                 }
             }
         }
+        */
+       world.step();
     }
     
     /**
@@ -206,8 +208,6 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
-        GameOfLifeWorld gameWorld = new GameOfLifeWorld();
-        gameWorld.step(world);
     }
 
 }
